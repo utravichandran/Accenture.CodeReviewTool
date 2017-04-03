@@ -1,0 +1,9 @@
+C:\Users\parinita.rani\documents\visual studio 2017\Projects\Accenture.UIPAth.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\bin\Debug\Accenture.UIPAth.CodeReviewTool.exe.config
+C:\Users\parinita.rani\documents\visual studio 2017\Projects\Accenture.UIPAth.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\bin\Debug\Accenture.UIPAth.CodeReviewTool.exe
+C:\Users\parinita.rani\documents\visual studio 2017\Projects\Accenture.UIPAth.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\bin\Debug\Accenture.UIPAth.CodeReviewTool.pdb
+C:\Users\parinita.rani\documents\visual studio 2017\Projects\Accenture.UIPAth.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.csprojResolveAssemblyReference.cache
+C:\Users\parinita.rani\documents\visual studio 2017\Projects\Accenture.UIPAth.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.AboutBoxCodeReviewUtility.resources
+C:\Users\parinita.rani\documents\visual studio 2017\Projects\Accenture.UIPAth.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.AccentureUIPathCodeReviewForm.resources
+C:\Users\parinita.rani\documents\visual studio 2017\Projects\Accenture.UIPAth.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.csproj.GenerateResource.Cache
+C:\Users\parinita.rani\documents\visual studio 2017\Projects\Accenture.UIPAth.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.exe
+C:\Users\parinita.rani\documents\visual studio 2017\Projects\Accenture.UIPAth.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.pdb
