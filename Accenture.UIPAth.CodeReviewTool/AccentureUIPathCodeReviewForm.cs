@@ -58,10 +58,7 @@ namespace Accenture.UIPAth.CodeReviewTool
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+       
         private void btnExportToExcel_Click(object sender, EventArgs e)
         {
            
@@ -70,108 +67,113 @@ namespace Accenture.UIPAth.CodeReviewTool
         {
             string path = txtFilePath.Text;
             string filename = path;
-            //ReadXML xml = new ReadXML();
-            //xml.ReadXMLData(filename);
+            
             int nestedLevelAllowed = 2;
             int currentDepth = 0;
 
             XmlTextReader reader = new XmlTextReader(filename);
             reader.Read();
             // Escape parsing document before Sequence Element.
-            reader.ReadToFollowing("Sequence");
-            while (reader.Read())
-            {
-                // Check for type of attribute of current node
-
-                switch (reader.NodeType)
+            //  reader.ReadToFollowing("Sequence");
+           
+                while (reader.Read())
                 {
-                    case XmlNodeType.Element: // The node is an element.
-                        string elementName = reader.Name;
-                        //Console.WriteLine("Tag Name: " + reader.Name);
+                    // Check for type of attribute of current node
 
-                        // Read the attributes.
-                        while (reader.MoveToNextAttribute())
-                        {
-                            string attributeName = reader.Name;
-                            string attributeValue = reader.Value;
+                    switch (reader.NodeType)
+                    {
+                        case XmlNodeType.Element: // The node is an element.
+                            string elementName = reader.Name;
+                            //Console.WriteLine("Tag Name: " + reader.Name);
 
-                            //Console.WriteLine(" Attribute Name:" + attributeName);
-                            //Console.WriteLine(" Attribute Value'" + attributeValue + "'");
-
-                            // Start: Check for Casing here
-                            if (elementName == "OutArgument")
+                            // Read the attributes.
+                            while (reader.MoveToNextAttribute())
                             {
-                                dtgCodeReview.Rows.Add(attributeValue, "ARGUMENT", "HIGH");
-                            }
-                            if (elementName == "Variable" && attributeName == "Name" && !String.IsNullOrEmpty(attributeValue))
-                            {
-                                //check if attribute value is all in UPPER case
-                                if (attributeValue == attributeValue.ToUpperInvariant())
+                                string attributeName = reader.Name;
+                                string attributeValue = reader.Value;
+
+                                //Console.WriteLine(" Attribute Name:" + attributeName);
+                                //Console.WriteLine(" Attribute Value'" + attributeValue + "'");
+
+                                // Start: Check for Casing here
+                                if (elementName == "OutArgument")
                                 {
-                                    dtgCodeReview.Rows.Add(attributeValue, "Attribute value is ALL in UPPER case", "HIGH");
+                                    dtgCodeReview.Rows.Add(attributeValue, "ARGUMENT", "HIGH");
+                                    dtgCodeReview.Refresh();
+                                }
+                                if (elementName == "Variable" && attributeName == "Name" && !String.IsNullOrEmpty(attributeValue))
+                                {
+                                    //check if attribute value is all in UPPER case
+                                    if (attributeValue == attributeValue.ToUpperInvariant())
+                                    {
+                                        dtgCodeReview.Rows.Add(attributeValue, "Attribute value is ALL in UPPER case", "HIGH");
+                                        dtgCodeReview.Refresh();
+                                    }
+                                    else
+                                    {
+                                        Boolean typecamel = false;
+                                        Boolean typepascal = false;
+                                        string camel = attributeValue.ToPascalCase();
+                                        string pascal = attributeValue.ToCamelCase();
+
+                                        if (attributeValue == camel)
+                                        {
+                                            typecamel = true;
+
+                                        }
+
+                                        if (attributeValue == pascal)
+                                        {
+                                            typepascal = true;
+                                        }
+                                        if (typecamel == true || typepascal == true)
+                                        {
+                                            dtgCodeReview.Rows.Add(attributeValue, "Naming Convention Not Followed", "HIGH");
+                                            dtgCodeReview.Refresh();
+
+                                        }
+                                    }
+
 
                                 }
-                                else
+                                // End: Check for casing
+                            }
+
+                            // Start: Check for Nested Ifs
+                            if (elementName == "If")
+                            {
+                                currentDepth++;
+
+                                if (currentDepth > nestedLevelAllowed)
                                 {
-                                    Boolean typecamel = false;
-                                    Boolean typepascal = false;
-                                    string camel = attributeValue.ToPascalCase();
-                                    string pascal = attributeValue.ToCamelCase();
 
-                                    if (attributeValue == camel)
-                                    {
-                                        typecamel = true;
-
-                                    }
-
-                                    if (attributeValue == pascal)
-                                    {
-                                        typepascal = true;
-                                    }
-                                    if (typecamel == true || typepascal == true)
-                                    {
-                                        dtgCodeReview.Rows.Add(attributeValue, "Naming Convention Not Followed", "HIGH");
-                                    }
+                                    dtgCodeReview.Rows.Add(elementName, "Nested If not allowed", "HIGH");
+                                    dtgCodeReview.Refresh();
                                 }
-
-
                             }
-                            // End: Check for casing
-                        }
 
-                        // Start: Check for Nested Ifs
-                        if (elementName == "If")
-                        {
-                            currentDepth++;
+                            // End: Check for Nested Ifs
 
-                            if (currentDepth > nestedLevelAllowed)
+                            break;
+                        //case XmlNodeType.Text: //Display the text in each element.
+                        //    Console.WriteLine(reader.Value);
+                        //    break;
+                        case XmlNodeType.EndElement: //Display the end of the element.
+                            string endElementName = reader.Name;
+
+                            //Console.Write("</" + reader.Name);
+                            //Console.WriteLine(">");
+                            if (endElementName == "If")
                             {
-                                dtgCodeReview.Rows.Add(elementName, "Nested If not allowed", "HIGH");
-
+                                if (currentDepth > 0)
+                                {
+                                    currentDepth--;
+                                }
                             }
-                        }
-
-                        // End: Check for Nested Ifs
-
-                        break;
-                    //case XmlNodeType.Text: //Display the text in each element.
-                    //    Console.WriteLine(reader.Value);
-                    //    break;
-                    case XmlNodeType.EndElement: //Display the end of the element.
-                        string endElementName = reader.Name;
-
-                        //Console.Write("</" + reader.Name);
-                        //Console.WriteLine(">");
-                        if (endElementName == "If")
-                        {
-                            if (currentDepth > 0)
-                            {
-                                currentDepth--;
-                            }
-                        }
-                        break;
+                            break;
+                    }
                 }
-            }
+            
             Console.Read();
         }
         private void releaseObject(object obj)
@@ -198,14 +200,11 @@ namespace Accenture.UIPAth.CodeReviewTool
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnCopyToClipboard_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

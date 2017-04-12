@@ -62,7 +62,6 @@
             this.groupBox1.Size = new System.Drawing.Size(494, 453);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtFilePath
             // 
@@ -83,7 +82,7 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.btnCloseApplication_Click);
             // 
             // button3
             // 
@@ -94,7 +93,7 @@
             this.button3.TabIndex = 10;
             this.button3.Text = "Copy To ClipBoard";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.btnCopyToClipboard_Click);
             // 
             // button2
             // 
@@ -148,6 +147,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Review";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnBrowseFile
             // 
