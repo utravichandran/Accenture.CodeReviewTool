@@ -169,6 +169,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Browse To XAML File";
             // 
+            
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";

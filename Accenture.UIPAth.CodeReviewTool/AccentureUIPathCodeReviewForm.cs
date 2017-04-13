@@ -18,10 +18,11 @@ namespace Accenture.UIPAth.CodeReviewTool
         {
            
             InitializeComponent();
-
+           
             this.dtgCodeReview.AutoResizeColumns();
             this.dtgCodeReview.ClipboardCopyMode =
                 DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.Refresh();
         }
         private void folderBrowserDialog2_HelpRequest(object sender, EventArgs e)
         {
@@ -44,14 +45,25 @@ namespace Accenture.UIPAth.CodeReviewTool
 
         }
         private void btnBrowseFile_Click_1(object sender, EventArgs e)
-        {
+       {
+                   OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+                   openFileDialog1.InitialDirectory = @"C:\";
+                   openFileDialog1.Title = "Select XAML Files for Review";
+                   openFileDialog1.CheckFileExists = true;
+                   openFileDialog1.CheckPathExists = true;
+                   openFileDialog1.DefaultExt = "xaml";
+                   openFileDialog1.Filter = "XAML files (*.xaml)|*.xaml";
+                   openFileDialog1.FilterIndex = 2;
+                   openFileDialog1.RestoreDirectory = true;
+                   openFileDialog1.ReadOnlyChecked = true;
+                   openFileDialog1.ShowReadOnly = true;
+                   txtFilePath.Text = openFileDialog1.FileName;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 this.txtFilePath.Visible = true;
                 this.txtFilePath.Text = openFileDialog1.FileName;
             }
-
-
         }
         private void AccentureUIPathCodeReviewForm_Load(object sender, EventArgs e)
         {
@@ -59,23 +71,26 @@ namespace Accenture.UIPAth.CodeReviewTool
         }
 
        
-        private void btnExportToExcel_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-           
+            ExportToExcel excel=new ExportToExcel();
+            
+            excel.ExportDataToExcel(dtgCodeReview);
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            dtgCodeReview.Rows.Clear();
             string path = txtFilePath.Text;
             string filename = path;
-            
+           
             int nestedLevelAllowed = 2;
             int currentDepth = 0;
 
             XmlTextReader reader = new XmlTextReader(filename);
             reader.Read();
             // Escape parsing document before Sequence Element.
-            //  reader.ReadToFollowing("Sequence");
-           
+            reader.ReadToFollowing("Sequence");
+          
                 while (reader.Read())
                 {
                     // Check for type of attribute of current node
@@ -174,7 +189,7 @@ namespace Accenture.UIPAth.CodeReviewTool
                     }
                 }
             
-            Console.Read();
+           
         }
         private void releaseObject(object obj)
         {
@@ -195,16 +210,30 @@ namespace Accenture.UIPAth.CodeReviewTool
         }
 
        
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnCopyToClipboard_Click(object sender, EventArgs e)
         {
+            if (this.dtgCodeReview
+        .GetCellCount(DataGridViewElementStates.Selected) > 0)
+            {
+                try
+                {
+                    // Add the selection to the clipboard.
+                    Clipboard.SetDataObject(
+                        this.dtgCodeReview.GetClipboardContent());
+
+                   
+                }
+                catch (System.Runtime.InteropServices.ExternalException)
+                {
+                    MessageBox.Show("Clipboard Not accessible ?", "Exit", MessageBoxButtons.OKCancel);
+                }
+            }
+
 
         }
 
-        
+
     }
 }
