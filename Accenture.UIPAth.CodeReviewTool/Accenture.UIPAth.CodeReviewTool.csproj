@@ -59,7 +59,11 @@
     <Compile Include="AccentureUIPathCodeReviewForm.Designer.cs">
       <DependentUpon>AccentureUIPathCodeReviewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\CopyToClipboard.cs" />
     <Compile Include="Infrastructure\ExportToExcel.cs" />
+    <Compile Include="Infrastructure\ReadFlowchart.cs" />
+    <Compile Include="Infrastructure\ReadSequence.cs" />
+    <Compile Include="Infrastructure\ReadStateMachine.cs" />
     <Compile Include="Infrastructure\ReadXML.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

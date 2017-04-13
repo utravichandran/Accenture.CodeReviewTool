@@ -89,7 +89,7 @@ namespace Accenture.UIPAth.CodeReviewTool
             XmlTextReader reader = new XmlTextReader(filename);
             reader.Read();
             // Escape parsing document before Sequence Element.
-            reader.ReadToFollowing("Sequence");
+           // reader.ReadToFollowing("Sequence");
           
                 while (reader.Read())
                 {
@@ -214,23 +214,9 @@ namespace Accenture.UIPAth.CodeReviewTool
 
         private void btnCopyToClipboard_Click(object sender, EventArgs e)
         {
-            if (this.dtgCodeReview
-        .GetCellCount(DataGridViewElementStates.Selected) > 0)
-            {
-                try
-                {
-                    // Add the selection to the clipboard.
-                    Clipboard.SetDataObject(
-                        this.dtgCodeReview.GetClipboardContent());
+            CopyToClipboard clipboard = new CopyToClipboard();
 
-                   
-                }
-                catch (System.Runtime.InteropServices.ExternalException)
-                {
-                    MessageBox.Show("Clipboard Not accessible ?", "Exit", MessageBoxButtons.OKCancel);
-                }
-            }
-
+            clipboard.CopyDataToClipboard(dtgCodeReview);
 
         }
 
