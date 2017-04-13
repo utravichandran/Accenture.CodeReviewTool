@@ -15,4 +15,3 @@ C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Acc
 C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.csproj.GenerateResource.Cache
 C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.exe
 C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.pdb
-C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.csprojResolveAssemblyReference.cache
