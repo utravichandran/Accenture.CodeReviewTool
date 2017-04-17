@@ -109,7 +109,6 @@ namespace Accenture.UIPAth.CodeReviewTool
                                 if (attributeValue == attributeValue.ToUpperInvariant())
                                 {
                                     dtgCodeReview.Rows.Add(attributeValue, "Attribute value is ALL in UPPER case", "HIGH");
-
                                 }
                                 else
                                 {
