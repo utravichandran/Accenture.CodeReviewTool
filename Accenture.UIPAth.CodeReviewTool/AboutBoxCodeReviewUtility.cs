@@ -101,5 +101,10 @@ namespace Accenture.UIPAth.CodeReviewTool
             }
         }
         #endregion
+
+        private void AboutBoxCodeReviewUtility_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
