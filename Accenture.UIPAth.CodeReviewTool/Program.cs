@@ -13,6 +13,7 @@ namespace Accenture.UIPAth.CodeReviewTool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new AboutBoxCodeReviewUtility());
             Application.Run(new AccentureUIPathCodeReviewForm());
         }
     }
