@@ -76,8 +76,6 @@ namespace Accenture.UIPAth.CodeReviewTool.Infrastructure
                 workbook = null;
                 excel = null;
             }
-
         }
-
     }
 }

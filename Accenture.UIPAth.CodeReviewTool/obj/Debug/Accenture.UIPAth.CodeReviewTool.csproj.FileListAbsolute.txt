@@ -17,3 +17,13 @@ C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Acc
 C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.pdb
 C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.csprojResolveAssemblyReference.cache
 C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.Resource.Message.resources
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\bin\Debug\Accenture.UIPAth.CodeReviewTool.exe.config
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\bin\Debug\Accenture.UIPAth.CodeReviewTool.exe
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\bin\Debug\Accenture.UIPAth.CodeReviewTool.pdb
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.csprojResolveAssemblyReference.cache
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.AboutBoxCodeReviewUtility.resources
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.AccentureUIPathCodeReviewForm.resources
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.Resource.Message.resources
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.csproj.GenerateResource.Cache
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.exe
+C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPAth.CodeReviewTool\obj\Debug\Accenture.UIPAth.CodeReviewTool.pdb
