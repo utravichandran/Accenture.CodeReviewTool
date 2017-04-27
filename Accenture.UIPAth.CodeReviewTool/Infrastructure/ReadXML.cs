@@ -43,11 +43,33 @@ namespace Accenture.UIPAth.CodeReviewTool.Infrastructure
                             //Console.WriteLine(" Attribute Value'" + attributeValue + "'");
 
                             // Start: Check for Casing here
-                            if (elementName == "OutArgument")
+                            if (elementName == "x:Property" && attributeName == "Name" )
                             {
-                                dg.Rows.Add(attributeValue, "ARGUMENT", "HIGH");
-                                dg.Refresh();
+                                Boolean typecamel = false;
+                                Boolean typepascal = false;
+                                string camel = attributeValue.ToPascalCase();
+                                string pascal = attributeValue.ToCamelCase();
+
+                                if (attributeValue == camel)
+                                {
+                                    typecamel = true;
+
+                                }
+
+                                if (attributeValue == pascal)
+                                {
+                                    typepascal = true;
+                                }
+                                if (typecamel == true || typepascal == true)
+                                {
+                                    dg.Rows.Add(attributeValue, "Argument Naming Convention Not Followed", "HIGH");
+                                    dg.Refresh();
+
+                                }
+                               
                             }
+                            
+                            
                             if (elementName == "Variable" && attributeName == "Name" && !String.IsNullOrEmpty(attributeValue))
                             {
                                 //check if attribute value is all in UPPER case
