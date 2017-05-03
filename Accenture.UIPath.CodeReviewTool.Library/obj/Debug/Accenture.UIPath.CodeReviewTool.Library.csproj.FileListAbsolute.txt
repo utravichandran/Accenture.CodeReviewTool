@@ -3,8 +3,3 @@ C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPath.CodeReviewTool.Library\bin\D
 C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPath.CodeReviewTool.Library\obj\Debug\Accenture.UIPath.CodeReviewTool.Library.dll
 C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPath.CodeReviewTool.Library\obj\Debug\Accenture.UIPath.CodeReviewTool.Library.pdb
 C:\UIPath\Accenture.CodeReviewTool\Accenture.UIPath.CodeReviewTool.Library\obj\Debug\Accenture.UIPath.CodeReviewTool.Library.csprojResolveAssemblyReference.cache
-C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPath.CodeReviewTool.Library\bin\Debug\Accenture.UIPath.CodeReviewTool.Library.dll
-C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPath.CodeReviewTool.Library\bin\Debug\Accenture.UIPath.CodeReviewTool.Library.pdb
-C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPath.CodeReviewTool.Library\obj\Debug\Accenture.UIPath.CodeReviewTool.Library.dll
-C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPath.CodeReviewTool.Library\obj\Debug\Accenture.UIPath.CodeReviewTool.Library.pdb
-C:\GitHubProjects\Accenture.CodeReviewTool\Accenture.UIPath.CodeReviewTool.Library\obj\Debug\Accenture.UIPath.CodeReviewTool.Library.csprojResolveAssemblyReference.cache
