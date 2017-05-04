@@ -169,7 +169,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Browse To XAML File";
             // 
-            
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -180,6 +179,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 433);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AccentureUIPathCodeReviewForm";
             this.Text = "AccentureUIPathCodeReviewForm";
             this.Load += new System.EventHandler(this.AccentureUIPathCodeReviewForm_Load);

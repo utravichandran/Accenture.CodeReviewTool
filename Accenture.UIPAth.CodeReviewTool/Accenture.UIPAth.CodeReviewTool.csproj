@@ -62,17 +62,12 @@
     <Compile Include="Infrastructure\CopyToClipboard.cs" />
     <Compile Include="Infrastructure\ExportToExcel.cs" />
     <Compile Include="Infrastructure\NamingCase.cs" />
-    <Compile Include="Infrastructure\ReadFlowchart.cs" />
-    <Compile Include="Infrastructure\ReadSequence.cs" />
+    <Compile Include="Infrastructure\StringConstant.cs" />
+    <Compile Include="Infrastructure\DefaultVlaueForArgument.cs" />
     <Compile Include="Infrastructure\ReadStateMachine.cs" />
     <Compile Include="Infrastructure\ReadXML.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource\Message.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Message.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -83,10 +78,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccentureUIPathCodeReviewForm.resx">
       <DependentUpon>AccentureUIPathCodeReviewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resource\Message.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Message.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

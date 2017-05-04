@@ -23,7 +23,7 @@ namespace Accenture.UIPAth.CodeReviewTool.Infrastructure
                 }
                 catch (System.Runtime.InteropServices.ExternalException)
                 {
-                    MessageBox.Show("Clipboard Not accessible ?", "Exit", MessageBoxButtons.OKCancel);
+                    MessageBox.Show(StringConstant.Clipboard, StringConstant.exit, MessageBoxButtons.OKCancel);
                 }
             }
 
